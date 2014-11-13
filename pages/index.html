@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block id %}home{% endblock id %}
+
+{% block content %}
+<article>
+<div class="wrap">
+<header>
+<h1><a href="about.html">Wouter de Bres</a></h1>
+<p class="meta">Designer</p>
+</header>
+<p class="intro">
+	I am a psychologist turned designer from Leiden, The Netherlands. I love helping software understand humans by crafting simple and friendly interfaces. I am a co-founder and designer at <a href="https://gibbon.co">Gibbon</a>, the easiest platform to learn from each other<a href="about.html" class="more">... <span>&#8618;</span></a>
+</p>
+</div><!--/wrap-->
+</article> 
+{% for post in posts %}
+<article>
+<div class="wrap">
+<header>
+<h1><a href="/{{ post.path }}">{{ post.title }}</a></h1>
+<p class="meta">{{ post.date|date:"M j, Y" }}</p>
+</header>
+<p class="intro">{{ post.abstract|safe }}<a href="/{{ post.path }}" class="more">... <span>&#8618;</span></a></p>
+</div><!--/wrap-->
+</article>
+{% endfor %}   
+{% endblock content %}
+
+
+
+{% comment %}
+{% if posts|length >= 4 %}
+<footer id="post-list-footer">
+  <a id="archive-link" href="archive.html"> <span class="arrow">&larr;</span> Archive</a>
+</footer>
+{% endif %}
+{% endcomment %} 

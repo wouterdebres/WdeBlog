@@ -1,0 +1,44 @@
+title: Hierarchy of UX Needs
+date: 10-03-2014
+abstract: What we want in life depends on what situation we are in. Someone living in a war zone without a roof above their head will probably feel no need for a yoga class, beautiful clothes or classical concert. According to psychologist Abraham Harold Maslow all behavior is motivated by a need, and those needs have a strict
+
+{% extends "post.html" %}
+{% block body %}
+
+<p class="intro">What we want in life depends on what situation we are in. Someone living in a war zone without a roof above their head will probably feel no need for a yoga class, beautiful clothes or classical concert. According to psychologist <a href="http://en.wikipedia.org/wiki/Abraham_Maslow">Abraham Harold Maslow</a> all behavior is motivated by a need, and those needs have a strict order and hierarchy, resulting in the pyramid of needs:</p>
+
+<figure>
+<img src="{% static 'img/posts/hierarchy-maslow.png' %}"s />
+<figcaption>Maslow's hierarchy of needs, <br/>with the more basic needs at the bottom.</figcaption>
+</figure>
+
+<p>It all starts with the need for physiological needs like food, shelter and sleep, followed by safety, love and warmth. Once you have those basic needs covered and reach the top of the pyramid you start worrying about self-esteem and self-actualization.</p>
+
+<p>For User Experience Design we can also create a hierarchy of needs. A user goes through the different states of motivation before caring for the next need. There have been several articles about a UX hierarchy of needs, like <a href="http://uxmovement.com/thinking/are-you-meeting-the-user-experience-hierarchy-of-needs/">this one</a> or <a href="http://www.smashingmagazine.com/2010/04/26/designing-for-a-hierarchy-of-needs/">this one</a>, but I believe they got the hierarchy wrong and they are missing the most important need for a product, <strong>Purpose</strong>. Therefore I created a new hierarchy of UX needs:</p>
+
+<figure>
+<img src="{% static 'img/posts/hierarchy-ux.png' %}" />
+<figcaption>My hierarchy of User Experience needs,<br/>with the more basic needs at the bottom.</figcaption>
+</figure>
+
+<h2>1. Purpose</h2>
+<p>At the base of the pyramid there is the most important thing of product design; purpose. Without purpose there isn’t a need for the whole product or feature. If your product does not fulfil a purpose it has no reason to exist at all. Before worrying about aesthetics or usability, start with finding out if there is a purpose for the product or feature.</p>
+
+<h2>2. Function</h2>
+<p>Once we established that there is a need for what we are about to build. The second thing on our list is that it should function. Does the product or feature work and is it even possible to fulfil the purpose. And last but not least, is it bug free and reliable?</p>
+
+<h2>3. Understandable</h2>
+<p>Once we have a purpose and it functions technically we can start worrying if the user understands how to use it. Can they find it and do they know which actions they have to take to use the product?</p>
+
+<h2>4. Easy to use</h2>
+<p>Great we now have something a user needs, it is technically sound and the user understands how to get the job done. At this level we can start thinking of simplifying the task. Think about removing constraints, giving feedback on user actions and making elements clearly identifiable and clickable.</p>
+
+<h2>5. Enjoyable</h2>
+<p>This is where we reach the pinnacle of User Experience; making the experience of using your product truly enjoyable. Make no mistakes, this is one of the hardest things to achieve.</p>
+
+<p>First of all you can be proud when you reach this point. Creating a product which checked the previous boxes is super hard. To make make the product enjoyable you have to think about great copy, a consistent &amp; fun product personality and stunning aesthetics. Not many products reach this level of awesomeness. I would love to hear from you what products you think have reached this point =&gt; <a href="http://twitter.com/wdeb">Tweet me</a></p>
+
+<h2>Conclusion</h2>
+<p>For product designers, including myself, it is a big pitfall to start focusing on the top level needs like aesthetics and personality before the reaching the other levels. So next time when we are working on a new product or feature, stop, think about the UX hierarchy of needs and climb the pyramid, step by step.</p>
+
+{% endblock body %}
