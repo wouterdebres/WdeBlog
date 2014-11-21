@@ -25,27 +25,35 @@
 <meta property="og:image" content="http://wouterdebr.es/static/img/wdeb-social-fb.jpg" />
 
 <!--[if IE]>
-<link rel="stylesheet" href="/static/css/ie.css" />
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 </head>
-<body id="">
-<hr id="topline" />
-<div id="container">
-<nav>
-
-<a href="/" class="back">&#8617;</a>
-
-<a href="/" id="logo">WdeB</a>
-
+<body id="sexy">
+<nav id="top">
+	<div class="wrap">
+		<h1><a href="#">Wouter de Bres</a></h1>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="about.html">About</a></li>
+		</ul>
+	</div><!--/wrap-->
 </nav>
-
-<article>
-<div class="wrap">
+<div id="container">
+	
 <header>
-<h1>Describe the Problem, Not Your Solution</h1>
-<p class="meta">Nov 5, 2014 </p>
+	<hr/>
+	<div class="wrap">
+		<h1>Describe the Problem, Not Your Solution</h1>
+		<p class="meta">Nov 5, 2014 </p>
+	</div><!--/wrap-->
 </header>
+
+<section class="textual">
+<div class="wrap">
+
+
+
 
 
 <p class="intro">It's 9am, I am sitting behind my desk and taking a sip from my first coffee &mdash; not a good time to discuss anything to be honest &mdash; and someone walks up to me and starts a sentence with “I have a great idea for a cool new feature…”</p>
@@ -80,7 +88,6 @@ It is part of the designers job to translate those feature suggestions to what t
 
 
 
-<footer class="article">
 <p>
 <a href="https://twitter.com/intent/tweet?url=http://wouterdebr.es/posts/describe-the-problem-not-your-solution.html&text=Go read: Describe the Problem, Not Your Solution&via=WdeB">Share on Twitter</a> or <a class="facebook" href="#"
   onclick="
@@ -90,19 +97,21 @@ It is part of the designers job to translate those feature suggestions to what t
       'width=626,height=436');
     return false;">Share on  Facebook</a>
 </p>
-<!--
-<p class="small center">
+<span class="prev">
+		
+			<a href='/posts/the-grumpy-founder-syndrome.html'>
+				<span class="arrow">&larr;</span> The Grumpy Founder Syndrome
+			</a>
+		
+	</span>
+	
 
-	READ NEXT:<br/>
-	<a href='/posts/the-grumpy-founder-syndrome.html'>
-		 The Grumpy Founder Syndrome
-	</a>
+	<span class="next">
+		
+	</span>
 
-</p>
--->
-</footer>
 </div><!--/wrap-->
-</article>
+</section>
 
 <section id="bio">
 <div class="wrap">
@@ -116,19 +125,12 @@ I am a psychologist turned designer and co-founder at <a href="https://gibbon.co
 </div><!--/wrap-->
 </section>
 
-<footer class="base">
-<div class="wrap">
-<ul id="social">
-<li><a href="http://twitter.com/wdeb" class="icon" target="blank_">&#xF611;</a></li>
-<li><a href="http://dribbble.com/wdeb" class="icon" target="blank_">&#xF660;</a></li>
-<li><a href="mailto:&#119;&#111;&#117;&#116;&#101;&#114;&#064;&#103;&#105;&#098;&#098;&#111;&#110;&#046;&#099;&#111;" class="icon">&#x2709;</a></li>
-<li><a href="http://instagram.com/wdeb" class="icon" target="blank_">&#xF641;</a></li>
-<li><a href="https://www.linkedin.com/in/wouterdebres" class="icon" target="blank_">&#xF612;</a></li>
-</ul>
-<p>Be Good <i>&amp;</i> Get Better</p>
-</div><!--/wrap-->
-</footer>
 </div><!--/container-->
+<footer>
+	<p class="small">Be Good <i class="amp">&amp;</i> Get Better</p>
+</footer>
+
+<!--JS STUFF-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="/static/js/main.js"></script>
 
@@ -139,10 +141,9 @@ I am a psychologist turned designer and co-founder at <a href="https://gibbon.co
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-42136029-2', 'wouterdebr.es');
   ga('send', 'pageview');
-
 </script>
+<!--/JS STUFF-->
 </body>
 </html>

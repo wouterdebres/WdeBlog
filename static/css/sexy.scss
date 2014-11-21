@@ -1,0 +1,354 @@
+/*=========================================
+RESET
+===========================================*/
+
+a,abbr,acronym,address,applet,b,big,blockquote,body,caption,center,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,i,iframe,img,ins,kbd,label,legend,li,object,ol,p,pre,q,s,samp,small,span,strike,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,tt,u,ul,var{border:0;outline:0;font-size:100%;vertical-align:baseline;background:0 0;margin:0;padding:0}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}a:active,a:focus{outline:0}article,aside,figure,footer,header,nav,section{display:block}*,:after,:before{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+
+/*=========================================
+FONT EMBEDDING
+===========================================*/
+
+@font-face {
+  font-family: "SSSocial";
+  src: url('../fonts/ss-social-regular.eot');
+  src: url('../fonts/ss-social-regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/ss-social-regular.woff') format('woff'),
+       url('../fonts/ss-social-regular.ttf') format('truetype'),
+       url('../fonts/ss-social-regular.svg#SSSocialRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ben";
+  src: url('../fonts/Ben-light.eot');
+  src: url('../fonts/Ben-light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Ben-light.woff') format('woff'),
+       url('../fonts/Ben-light.ttf') format('truetype'),
+       url('../fonts/Ben-light.svg') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ben";
+  src: url('../fonts/Ben-Regular.eot');
+  src: url('../fonts/Ben-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Ben-Regular.woff') format('woff'),
+       url('../fonts/Ben-Regular.ttf') format('truetype'),
+       url('../fonts/Ben-Regular.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ben";
+  src: url('../fonts/Ben-Bold.eot');
+  src: url('../fonts/Ben-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Ben-Bold.woff') format('woff'),
+       url('../fonts/Ben-Bold.ttf') format('truetype'),
+       url('../fonts/Ben-Bold.svg') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/*=========================================
+MIXINS
+===========================================*/
+
+@mixin border-radius($size) {
+  -webkit-border-radius: $size;
+  -moz-border-radius: $size;
+  border-radius: $size;
+}
+
+@mixin animate{
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+/*=========================================
+VARIABLES
+===========================================*/
+
+$color-blue: #33C6F4;
+$color-red: #F44336;
+$color-pink: #E91E63;
+$color-green: #009688;
+$color-lime: #CDDC39;
+$color-gibbon: #39c8b6;
+$color-mytaxi: #FDC300;
+$color-vk: #232C39;
+$color-invy: #FF9800;
+$color-doo: #156FB0;
+
+
+$size-frame: 90px;
+$size-padding: 10%;
+
+/*=========================================
+MAIN ELEMENTS
+===========================================*/
+
+html, body{
+	min-height: 100%;
+	height: 100%;
+	font-family: 'Ben', Helvetica Neue, Helvetica, Geneva, sans-serif ;
+	font-size: 62.5%;
+	background: #fff;
+	color: rgba(35,44,57,0.7);
+}
+
+body{
+	padding: 0 $size-frame;
+}
+
+#container{
+	margin: 0 auto;
+	max-width: 1400px;
+	background: #faf5f5;
+}
+
+/*=========================================
+TYPE + IMAGES
+===========================================*/
+
+h1, h2, h3, h4, h5 , h6{
+	font-weight: 300;
+	line-height: 1.3em;
+	margin-bottom: 0.4em;
+	font-size: 3.6rem;
+}
+
+h1{
+	font-size: 5.6rem;
+	margin-bottom: 0;
+	color: #fff;
+}
+
+p{
+	font-size: 1.8rem;
+	line-height: 1.7em;
+	margin-bottom: 1.7em;
+}
+
+p.small{
+	font-size: 1.2rem;
+}
+
+.amp {
+  font-family: Baskerville, Palatino, "Book Antiqua", serif;
+  font-style: italic;
+  }
+
+img{
+	max-width: 100%;
+	display: block;
+	margin: auto;
+}
+
+/*=========================================
+LINKS + BUTTONS
+===========================================*/
+
+a{
+	color: inherit;
+	text-decoration: none;
+	@include animate;
+}
+
+a.button{
+	font-size: 1.1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 2px;
+	color: #fff;
+	display: inline-block;
+	padding: 1.6rem 3rem;
+	border: 2px solid rgba(255, 255, 255, .8);
+	@include border-radius(1px);
+	
+	&:hover{
+		border-color: rgba(255, 255, 255, 1);
+	}
+}
+
+/*=========================================
+TOP NAV
+===========================================*/
+
+#top{
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 0 $size-frame;
+	
+	.wrap{
+		margin: 0 auto;
+		max-width: 1400px;
+		height: $size-frame;
+		position: relative;
+		
+		h1{
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: 41px;
+			
+			a{
+				display: block;
+				width: 41px;
+				height: $size-frame;
+				text-indent: -9999em;
+				background: url(../img/wdeb-logo.svg);
+				background-size: 41px auto;
+			}
+		}
+		
+		ul{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 41px;
+			right: 0;
+			background: #fff;
+			text-align: right;
+			
+			li{
+				display: inline-block;
+				margin-left: $size-frame/2;
+				
+				a{
+					display: block;
+					height: $size-frame;
+					line-height: $size-frame;
+					padding: 0 4px;
+					font-size: 1.1rem;
+					font-weight: bold;
+					text-transform: uppercase;
+					letter-spacing: 2px;
+					color: rgba(0, 0, 0, .35);
+			
+				}
+			}
+		}
+	}
+}
+
+/*=========================================
+HEADER
+===========================================*/
+
+header{
+	background: $color-blue;
+	padding: (1.618*$size-padding) $size-padding;
+	
+	&.green{background: $color-green;}
+	&.red{background: $color-red;}
+	&.pink{background: $color-pink;}
+	&.lime{background: $color-lime;}
+
+	hr{
+		border: none;
+		background: none;
+		display: block;
+		height: $size-frame;
+	}
+	
+	.button{
+		margin-top: 2rem;
+	}
+}
+
+/*=========================================
+SECTIONS
+===========================================*/
+
+.textual{
+	padding: $size-padding;
+
+	.wrap{
+		margin: 0 auto;
+		max-width: 600px;
+	}
+}
+
+.project{
+	background: rgba(35,44,57,1);
+	display: table;
+	min-height: 600px;
+	
+	&.gibbon{background: $color-gibbon;}
+	&.vk{background: $color-vk;}
+	&.mytaxi{background: $color-mytaxi;}
+	&.invy{background: $color-invy;}
+	&.doo{background: $color-doo;}
+	
+	.wrap{
+		display: table-cell;
+		vertical-align: middle;
+		width: 42%;
+		padding: $size-padding;
+		
+		h2, p{
+			color: #fff;
+		}
+	}
+	
+	figure{
+		display: table-cell;
+		vertical-align: bottom;
+		overflow: hidden;
+		margin: 0;
+	}
+	
+}
+
+/*=========================================
+FOOTER
+===========================================*/
+
+footer{
+	height: $size-frame;
+	
+	p{
+		line-height: $size-frame;
+		text-align: center;
+		margin: 0;
+	}
+}
+
+
+
+/*=========================================
+ANIMATION
+===========================================*/
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+ 
+header .wrap, 
+section .wrap, 
+section figure{
+    opacity:0;  
+    -webkit-animation:fadeIn ease-in 1;  
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+ 
+    -webkit-animation-fill-mode:forwards; 
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+ 
+    -webkit-animation-duration:0.8s;
+    -moz-animation-duration:0.8s;
+    animation-duration:0.8s;
+}

@@ -21,17 +21,23 @@
 {% endblock back %}
 
 {% block content %}
-<article>
-<div class="wrap">
 <header>
-<h1>{{ title }}</h1>
-<p class="meta">{{ date|date:"M j, Y" }} </p>
+	<hr/>
+	<div class="wrap">
+		<h1>{{ title }}</h1>
+		<p class="meta">{{ date|date:"M j, Y" }} </p>
+	</div><!--/wrap-->
 </header>
+
+<section class="textual">
+<div class="wrap">
+
+
+
 {% block body %}
 {% endblock body %}
 
 
-<footer class="article">
 <p>
 <a href="https://twitter.com/intent/tweet?url=http://wouterdebr.es/{{ path }}&text=Go read: {{ title }}&via=WdeB">Share on Twitter</a> or <a class="facebook" href="#"
   onclick="
@@ -41,19 +47,25 @@
       'width=626,height=436');
     return false;">Share on  Facebook</a>
 </p>
-<!--
-<p class="small center">
-{% if prevPost %}
-	READ NEXT:<br/>
-	<a href='/{{ prevPost.path }}'>
-		 {{ prevPost.title }}
-	</a>
-{% endif %}
-</p>
--->
-</footer>
+<span class="prev">
+		{% if prevPost %}
+			<a href='/{{ prevPost.path }}'>
+				<span class="arrow">&larr;</span> {{ prevPost.title }}
+			</a>
+		{% endif %}
+	</span>
+	
+
+	<span class="next">
+		{% if nextPost %}
+			<a href='/{{ nextPost.path }}'>
+				{{ nextPost.title }} <span class="arrow">&rarr;</span>
+			</a>
+		{% endif %}
+	</span>
+
 </div><!--/wrap-->
-</article>
+</section>
 
 <section id="bio">
 <div class="wrap">

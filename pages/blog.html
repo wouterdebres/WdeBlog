@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+
+{% block content %}
+<header class="pink">
+	<hr />
+	<div class="wrap">
+		<h1>Blog + Ramblings</h1>
+		<a href="" class="button">Follow @wdeB</a>
+	</div><!--/wrap-->
+</header>
+
+{% for post in posts %}
+<section class="textual">
+<div class="wrap">
+<h2><a href="/{{ post.path }}">{{ post.title }}</a></h2>
+<p class="meta">{{ post.date|date:"F j, Y" }}</p>
+<p class="intro">{{ post.abstract }}<a href="/{{ post.path }}" class="more">... <span>&#8618;</span></a></p>
+</div><!--/wrap-->
+</section>
+{% endfor %}
+{% endblock %}
+
+
+{% comment %}
+{% if posts|length >= 4 %}
+<footer id="post-list-footer">
+  <a id="archive-link" href="archive.html"> <span class="arrow">&larr;</span> Archive</a>
+</footer>
+{% endif %}
+{% endcomment %}

@@ -19,7 +19,7 @@
 
 	
 	<url>
-		<loc>archive.html</loc>
+		<loc>blog.html</loc>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>

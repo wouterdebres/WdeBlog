@@ -2,36 +2,88 @@
 {% block id %}home{% endblock id %}
 
 {% block content %}
-<article>
-<div class="wrap">
 <header>
-<h1><a href="about.html">Wouter de Bres</a></h1>
-<p class="meta">Designer</p>
+	<hr />
+	<div class="wrap">
+		<h1>Wouter de Bres<br/>Designer + Psychologist</h1>
+		<a href="" class="button">Give *High 5*</a>
+	</div><!--/wrap-->
 </header>
-<p class="intro">
-	I am a psychologist turned designer from Leiden, The Netherlands. I love helping software understand humans by crafting simple and friendly interfaces. I am a co-founder and designer at <a href="https://gibbon.co">Gibbon</a>, the easiest platform to learn from each other<a href="about.html" class="more">... <span>&#8618;</span></a>
-</p>
-</div><!--/wrap-->
-</article> 
-{% for post in posts %}
-<article>
-<div class="wrap">
-<header>
-<h1><a href="/{{ post.path }}">{{ post.title }}</a></h1>
-<p class="meta">{{ post.date|date:"M j, Y" }}</p>
-</header>
-<p class="intro">{{ post.abstract|safe }}<a href="/{{ post.path }}" class="more">... <span>&#8618;</span></a></p>
-</div><!--/wrap-->
-</article>
-{% endfor %}   
+<section class="textual">
+	<div class="wrap">
+		<p>
+			I  a psychologist turned designer from Leiden, The Netherlands. I love helping software understand humans by crafting simple and friendly interfaces. I am a co-founder and designer at Gibbon, the easiest platform to learn from each other.
+		</p>
+		<p>
+		I believe that creating pretty pixels is not enough, making software easy to use and seemingly simple is the real challenge. There is no silver bullet for designing perfect user experiences. It is hard work, sweat and determination that makes great products & experiences.
+		</p>
+		<p>
+		My designs would be useless pretty pixels if it wasn't for my partners in crime Joeri Djojosoeparto, Petar Radoševiç and Wout Laban who are the best programmers & growth hacker in the world.
+		</p>
+	</div><!--/wrap-->
+</section>
+<section class="project gibbon">
+	<div class="wrap">
+		<h2>Gibbon</h2>
+		<p>
+			Super awesome project description that you wouldn't believe, seriously cool. Really. You should check it out.	
+		</p>
+		<a href="" class="button">View Project</a>
+	</div><!--/wrap-->
+	<figure>
+		<img src="http://lorempixum.com/400/400" alt="project name" />
+	</figure>
+</section>
+<section class="project vk">
+	<figure>
+		<img src="http://lorempixum.com/400/400" alt="project name" />
+	</figure>
+	<div class="wrap">
+		<h2>Volkskrant</h2>
+		<p>
+			Super awesome project description that you wouldn't believe, seriously cool. Really. You should check it out.	
+		</p>
+		<a href="" class="button">View Project</a>
+	</div><!--/wrap-->
+</section>
+<section class="project mytaxi">
+	<div class="wrap">
+		<h2>MyTaxi</h2>
+		<p>
+			Super awesome project description that you wouldn't believe, seriously cool. Really. You should check it out.	
+		</p>
+		<a href="" class="button">View Project</a>
+	</div><!--/wrap-->
+	<figure>
+		<img src="http://lorempixum.com/400/400" alt="project name" />
+	</figure>
+</section>
+<section class="project doo">
+	<figure>
+		<img src="http://lorempixum.com/400/400" alt="project name" />
+	</figure>
+	<div class="wrap">
+		<h2>Doo / Scanbot</h2>
+		<p>
+			Super awesome project description that you wouldn't believe, seriously cool. Really. You should check it out.	
+		</p>
+		<a href="" class="button">View Project</a>
+	</div><!--/wrap-->
+</section>
+<section class="project invy">
+	<div class="wrap">
+		<h2>Invy</h2>
+		<p>
+			Super awesome project description that you wouldn't believe, seriously cool. Really. You should check it out.	
+		</p>
+		<a href="" class="button">View Project</a>
+	</div><!--/wrap-->
+	<figure>
+		<img src="http://lorempixum.com/400/400" alt="project name" />
+	</figure>
+</section>  
 {% endblock content %}
 
 
 
-{% comment %}
-{% if posts|length >= 4 %}
-<footer id="post-list-footer">
-  <a id="archive-link" href="archive.html"> <span class="arrow">&larr;</span> Archive</a>
-</footer>
-{% endif %}
-{% endcomment %} 
+
