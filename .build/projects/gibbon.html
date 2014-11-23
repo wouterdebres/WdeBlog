@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<title>{% block title %}Wouter de Bres{% endblock %}</title>
-<link rel="shortcut icon" href="{% static '/img/favicon.png' %}" type="image/png" />
-<link rel="stylesheet" href="{% static '/css/sexy.css' %}">
+<title>Wouter de Bres</title>
+<link rel="shortcut icon" href="/static/img/favicon.png" type="image/png" />
+<link rel="stylesheet" href="/static/css/sexy.css">
 <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <meta name="author" content="Wouter de Bres">
 <meta name="description" content="Wouter de Bres is a psychologist turned designer from the Netherlands working at Gibbon.co">
-{% block meta %}
+
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@WdeB">
 <meta name="twitter:title" content="Wouter de Bres">
@@ -23,12 +23,12 @@
 <meta property="og:title" content="Wouter de Bres" />
 <meta property="og:description" content="I am a psychologist turned designer from Holland and co-founder of Gibbon.co. This is my blog." />
 <meta property="og:image" content="http://wouterdebr.es/static/img/wdeb-social-fb.jpg" />
-{% endblock meta %}
+
 <!--[if IE]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 </head>
-<body id="{% block id %}sexy{% endblock id %}">
+<body id="sexy">
 <nav id="top">
 	<div class="wrap">
 		<h1><a href="#">Wouter de Bres</a></h1>
@@ -40,7 +40,7 @@
 	</div><!--/wrap-->
 </nav>
 <div id="container">
-	{% block content %}
+	
 	<header>
 		<hr />
 		<div class="wrap">
@@ -121,7 +121,7 @@
 			<img src="http://lorempixum.com/400/400" alt="project name" />
 		</figure>
 	</section>
-	{% endblock content %}
+	
 </div><!--/container-->
 <footer>
 	<p class="small">Be Good <i class="amp">&amp;</i> Get Better</p>
@@ -130,8 +130,8 @@
 <!--JS STUFF-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="/static/js/main.js"></script>
-{% block scripts %}
-{% endblock scripts %}
+
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

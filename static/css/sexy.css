@@ -146,7 +146,7 @@ a {
   transition: all 0.2s ease; }
 
 a.button {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
@@ -203,14 +203,25 @@ TOP NAV
         margin-left: 45px; }
         #top .wrap ul li a {
           display: block;
+          position: relative;
           height: 90px;
           line-height: 90px;
           padding: 0 4px;
-          font-size: 1.1rem;
+          font-size: 1.2rem;
           font-weight: bold;
           text-transform: uppercase;
           letter-spacing: 2px;
-          color: rgba(0, 0, 0, 0.35); }
+          color: rgba(35, 44, 57, 0.3); }
+        #top .wrap ul li.current a {
+          color: #232c39; }
+          #top .wrap ul li.current a::after {
+            display: block;
+            content: '';
+            height: 1px;
+            margin: 0 10px;
+            bottom: 25px;
+            background: #232c39;
+            position: relative; }
 
 /*=========================================
 HEADER
@@ -219,7 +230,7 @@ header {
   background: #33c6f4;
   padding: 16.18% 10%; }
   header.green {
-    background: #009688; }
+    background: #00bfa5; }
   header.red {
     background: #f44336; }
   header.pink {
@@ -314,6 +325,6 @@ section figure {
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-animation-duration: 0.8s;
-  -moz-animation-duration: 0.8s;
-  animation-duration: 0.8s; }
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  animation-duration: 0.5s; }
