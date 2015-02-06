@@ -19,7 +19,7 @@
 
 	
 	<url>
-		<loc>archive.html</loc>
+		<loc>blog.html</loc>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -78,6 +78,22 @@
 	
 	<url>
 		<loc>posts/you-need-a-side-project.html</loc>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+	
+
+	
+	<url>
+		<loc>projects/gibbon.html</loc>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+	
+
+	
+	<url>
+		<loc>projects/volkskrant.html</loc>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
